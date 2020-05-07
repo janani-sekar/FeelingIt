@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    Home
+{% endblock %}
+
+{% block main %}
+<p>Your Mood History:</p>
+<span>This Week</span>
+<table class="table table-bordered table-bordered" id = "week">
+  <thead>
+    <tr style = "background: #f2d3e3">
+      {%for item in moods%}
+       <th scope="col" style = "border: 5px solid white;" value = {{item.day}}>{{item.day}}</th>
+      {% endfor %}
+    </tr>
+    <tr style = "background: lavender;">
+      {%for item in moods%}
+      <td scope="col" style = "border: 5px solid white;" value = {{item.mood}}>{{item.mood}}</td>
+      {% endfor %}
+    </tr>
+  </thead>
+</table>
+
+<span>Last Week</span>
+<table class="table table-bordered table-bordered" id = "week1">
+  <thead>
+    <tr style = "background: #f2d3e3">
+      {%for item in moodstwo%}
+       <th scope="col" style = "border: 5px solid white;" value = {{item.day}}>{{item.day}}</th>
+      {% endfor %}
+    </tr>
+    <tr style = "background: lavender;">
+      {%for item in moodstwo%}
+      <td scope="col" style = "border: 5px solid white;" value = {{item.mood}}>{{item.mood}}</td>
+      {% endfor %}
+    </tr>
+  </thead>
+</table>
+
+<span>Two Weeks Ago</span>
+<table class="table table-bordered table-bordered" id = "week2">
+  <thead>
+    <tr style = "background: #f2d3e3">
+      {%for item in moodsthree%}
+       <th scope="col" style = "border: 5px solid white;" value = {{item.day}}>{{item.day}}</th>
+      {% endfor %}
+    </tr>
+    <tr style = "background: lavender;">
+      {%for item in moodsthree%}
+      <td scope="col" style = "border: 5px solid white;" value = {{item.mood}}>{{item.mood}}</td>
+      {% endfor %}
+    </tr>
+  </thead>
+</table>
+
+<script>
+var cells = document.getElementById("week2").getElementsByTagName("td");
+for (var i = 0; i < cells.length; i++) {
+  console.log("hello")
+    if (cells[i].innerHTML == "anxious") {
+        cells[i].style.backgroundColor = "#c22365";
+    }
+    if (cells[i].innerHTML == "stressed") {
+        cells[i].style.backgroundColor = "#4b328a";
+    }
+    if (cells[i].innerHTML == "sad") {
+        cells[i].style.backgroundColor = "#7b2a82";
+    }
+    if (cells[i].innerHTML == "angry") {
+        cells[i].style.backgroundColor = "#37569e";
+    }
+    if (cells[i].innerHTML == "calm") {
+        cells[i].style.backgroundColor = "#4087ad";
+    }
+    if (cells[i].innerHTML == "happy") {
+        cells[i].style.backgroundColor = "#41aba7";
+    }
+    if (cells[i].innerHTML == "excited") {
+        cells[i].style.backgroundColor = "#75c98e";
+    }
+}
+var cells = document.getElementById("week1").getElementsByTagName("td");
+for (var i = 0; i < cells.length; i++) {
+  console.log("hello")
+    if (cells[i].innerHTML == "anxious") {
+        cells[i].style.backgroundColor = "#c22365";
+    }
+    if (cells[i].innerHTML == "stressed") {
+        cells[i].style.backgroundColor = "#4b328a";
+    }
+    if (cells[i].innerHTML == "sad") {
+        cells[i].style.backgroundColor = "#7b2a82";
+    }
+    if (cells[i].innerHTML == "angry") {
+        cells[i].style.backgroundColor = "#37569e";
+    }
+    if (cells[i].innerHTML == "calm") {
+        cells[i].style.backgroundColor = "#4087ad";
+    }
+    if (cells[i].innerHTML == "happy") {
+        cells[i].style.backgroundColor = "#41aba7";
+    }
+    if (cells[i].innerHTML == "excited") {
+        cells[i].style.backgroundColor = "#75c98e";
+    }
+}
+var cells = document.getElementById("week").getElementsByTagName("td");
+for (var i = 0; i < cells.length; i++) {
+  console.log("hello")
+    if (cells[i].innerHTML == "anxious") {
+        cells[i].style.backgroundColor = "#c22365";
+    }
+    if (cells[i].innerHTML == "stressed") {
+        cells[i].style.backgroundColor = "#4b328a";
+    }
+    if (cells[i].innerHTML == "sad") {
+        cells[i].style.backgroundColor = "#7b2a82";
+    }
+    if (cells[i].innerHTML == "angry") {
+        cells[i].style.backgroundColor = "#37569e";
+    }
+    if (cells[i].innerHTML == "calm") {
+        cells[i].style.backgroundColor = "#4087ad";
+    }
+    if (cells[i].innerHTML == "happy") {
+        cells[i].style.backgroundColor = "#41aba7";
+    }
+    if (cells[i].innerHTML == "excited") {
+        cells[i].style.backgroundColor = "#75c98e";
+    }
+}
+</script>
+{% endblock %}

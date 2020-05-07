@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    Analysis
+{% endblock %}
+
+{% block main %}
+<p><a href="/calendar" style = "color: black;">Based on your average mood this week:</a></p>
+<span>{{ reco.action }}</span>
+<span style = "color: crimson;">{{ alert }}</span>
+<p><br><a href = "/" style = "color: black;">Based on your mood today:</a></p>
+<span id = "daily">{{dailyReco.activity}}</span>
+{% endblock %}
+
+<script>
+
+
+</script>

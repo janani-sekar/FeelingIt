@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+
+nav .navbar-brand .pink
+{
+    color: #c22365;
+    font-size: xx-large;
+    font-weight: 600;
+    font-family: 'Handlee', cursive;
+}
+nav .navbar-brand .blue
+{
+    color: #3cb4bd;
+    font-size: x-large;
+    font-weight: lighter;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+button
+{
+    background-color: #c22365;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 28px;
+    border: none;
+}
+
+p
+{
+    font-size: xx-large;
+    font-family: 'Handlee', cursive;
+    font-weight: 600;
+}
+
+
+td{
+    color: lavender;
+    font-weight: 300;
+    height: 70px;
+}
+
+th{
+    font-weight: 500;
+    color: #404040;
+
+}
+
+
+.fa-beat {
+  animation:fa-beat 5s ease infinite;
+}
+@keyframes fa-beat {
+  0% {
+    transform:scale(1);
+  }
+  5% {
+    transform:scale(1.25);
+  }
+  20% {
+    transform:scale(1);
+  }
+  30% {
+    transform:scale(1);
+  }
+  35% {
+    transform:scale(1.25);
+  }
+  50% {
+    transform:scale(1);
+  }
+  55% {
+    transform:scale(1.25);
+  }
+  70% {
+    transform:scale(1);
+  }
+}

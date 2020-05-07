@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    Home
+{% endblock %}
+
+{% block main %}
+<script>
+function colorHeart(){
+	mood = localStorage.getItem('mood');
+	switch(mood){
+		case "anxious":
+			document.getElementById("heart").style.color = "#c22365";
+			break;
+		case "sad":
+			document.getElementById("heart").style.color = "#7b2a82";
+			break;
+		case "stressed":
+			document.getElementById("heart").style.color = "#4b328a";
+			break;
+		case "angry":
+			document.getElementById("heart").style.color = "#37569e";
+			break;
+		case "calm":
+			document.getElementById("heart").style.color = "#4087ad";
+			break;
+		case "happy":
+			document.getElementById("heart").style.color = "#41aba7";
+			break;
+		case "excited":
+			document.getElementById("heart").style.color = "#75c98e";
+		default:
+			text = "no corresponding mood"
+	}
+}
+</script>
+
+<span></span>
+<p> <span id="output">Today I feel:</span><br> </p>
+<i class="fa fa-heart fa-beat" style="font-size:50px;" id = heart ><br></i>
+<script>
+	colorHeart();
+</script>
+<p><br></p>
+<form action="/" method="post" name="moodform" id="moodform">
+<button id="anxious" name = "mood" value = "anxious">Anxious</button>
+<button id="sad" name = "mood" value = "sad" style = "background-color: #7b2a82">Sad</button>
+<button id="stressed" name = "mood" value = "stressed" style = "background-color: #4b328a">Stressed</button>
+<button id= "angry" name = "mood" value = "angry" style = "background-color: #37569e">Angry</button>
+<button id= "calm" name = "mood" value = "calm" style = "background-color: #4087ad">Calm</button>
+<button id = "happy" name = "mood" value = "happy" style = "background-color: #41aba7">Happy</button>
+<button id = "excited" name = "mood" value = "excited" style = "background-color: #75c98e">Excited</button>
+</form>
+
+<script>
+
+
+
+
+document.getElementById("anxious").onclick = function(){
+	document.getElementById("heart").style.color = '#c22365';
+	localStorage.setItem("mood", "anxious");
+	document.moodform.submit();
+}
+
+
+document.getElementById("stressed").onclick = function(){
+	document.getElementById("heart").style.color = '#4b328a';
+	localStorage.setItem("mood", "stressed");
+	document.moodform.submit();
+}
+
+document.getElementById("sad").onclick = function(){
+	document.getElementById("heart").style.color = '#7b2a82';
+	localStorage.setItem("mood", "sad");
+	document.moodform.submit();
+}
+
+document.getElementById("angry").onclick = function(){
+	document.getElementById("heart").style.color = '#37569e';
+	localStorage.setItem("mood", "angry");
+	document.moodform.submit();
+}
+
+document.getElementById("calm").onclick = function(){
+	document.getElementById("heart").style.color = '#4087ad';
+	localStorage.setItem("mood", "calm");
+	document.moodform.submit();
+}
+
+document.getElementById("happy").onclick = function(){
+	document.getElementById("heart").style.color = '#41aba7';
+	localStorage.setItem("mood", "happy");
+	document.moodform.submit();
+}
+
+document.getElementById("excited").onclick = function(){
+	document.getElementById("heart").style.color = '#75c98e';
+	localStorage.setItem("mood", "excited");
+	document.moodform.submit();
+}
+</script>
+{% endblock %}
